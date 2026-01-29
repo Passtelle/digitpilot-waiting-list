@@ -3,69 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DigitPilot | Exclusive Waitlist</title>
+    <title>DigitPilot | The Future of Trading Education</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #020617; color: #f8fafc; }
-        .accent-glow { text-shadow: 0 0 20px rgba(16, 185, 129, 0.5); }
+        body { font-family: 'Inter', sans-serif; background-color: #020617; color: #f8fafc; }
+        .hero-gradient { background: radial-gradient(circle at top, #064e3b 0%, #020617 70%); }
+        .glass { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(16, 185, 129, 0.1); }
+        .accent-glow { text-shadow: 0 0 30px rgba(16, 185, 129, 0.6); }
     </style>
 </head>
-<body class="font-sans">
+<body>
 
-    <section class="min-h-screen flex flex-col items-center justify-center px-6 text-center">
-        <div class="inline-block px-4 py-1.5 mb-6 text-xs font-semibold tracking-widest text-emerald-400 uppercase border border-emerald-400/30 rounded-full bg-emerald-400/10">
-            Get Early Access
+    <section class="hero-gradient min-h-screen flex flex-col items-center justify-center px-6 text-center">
+        <div class="inline-block px-4 py-1.5 mb-8 text-xs font-bold tracking-[0.2em] text-emerald-400 uppercase border border-emerald-400/30 rounded-full bg-emerald-400/10">
+            System Status: Online
         </div>
-        <h1 class="max-w-4xl text-5xl md:text-7xl font-bold mb-6 tracking-tight">
-            The future of trading starts with <span class="text-emerald-400 accent-glow">your edge</span>
+        <h1 class="max-w-4xl text-5xl md:text-8xl font-extrabold mb-8 leading-tight tracking-tighter">
+            The Next Generation of <br><span class="text-emerald-400 accent-glow">Trading Education</span>
         </h1>
-        <p class="max-w-2xl text-lg md:text-xl text-slate-400 mb-10">
-            The Next Generation of Trading Education is Almost Here. Join the exclusive inner circle to secure your spot for the DigitPilot launch.
+        <p class="max-w-2xl text-lg md:text-xl text-slate-400 mb-12 font-medium">
+            Join the exclusive inner circle for the DigitPilot launch. Master the markets through guided learning and zero-risk simulation.
         </p>
 
-        <form action="https://formspree.io/f/mdaaolpy" method="POST" class="w-full max-w-md flex flex-col md:flex-row gap-3">
-            <input type="email" name="email" required placeholder="Enter your email" 
-                class="flex-1 px-6 py-4 rounded-xl bg-slate-900 border border-slate-800 focus:outline-none focus:border-emerald-400 transition-all text-white">
-            <button type="submit" 
-                class="px-8 py-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold transition-all transform hover:scale-105">
-                Join the waitlist
-            </button>
-        </form>
+        <div class="w-full max-w-lg glass p-2 rounded-2xl shadow-2xl">
+            <form action="https://formspree.io/f/mdaaolpy" method="POST" class="flex flex-col md:flex-row gap-2">
+                <input type="email" name="email" required placeholder="Enter your email" 
+                    class="flex-1 px-6 py-5 rounded-xl bg-slate-900/50 border border-slate-700 focus:outline-none focus:border-emerald-400 transition-all text-white">
+                <button type="submit" 
+                    class="px-8 py-5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black uppercase tracking-wider transition-all transform hover:scale-[1.02] active:scale-95 shadow-[0_0_20px_rgba(16,185,129,0.4)]">
+                    Join the waitlist
+                </button>
+            </form>
+        </div>
     </section>
 
-    <section class="py-24 px-6 bg-slate-950">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 text-left">
-            
-            <div>
-                <div class="text-emerald-400 text-2xl font-bold mb-4">01.</div>
-                <h3 class="text-2xl font-semibold mb-3">Guided Learning</h3>
-                <p class="text-slate-400 leading-relaxed">
-                    Step by step videos and lessons that take you from "What is a wallet?" to "How do I trade?" with ease.
-                </p>
-            </div>
+    <section class="py-32 px-6 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-16 text-center uppercase tracking-widest text-slate-500">The DigitPilot Journey</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <div class="glass p-10 rounded-3xl hover:border-emerald-400/40 transition-colors group">
+                    <div class="w-12 h-12 bg-emerald-500/10 border border-emerald-500/20 rounded-lg flex items-center justify-center mb-6 text-emerald-400 font-bold group-hover:bg-emerald-500 group-hover:text-slate-900 transition-all">01</div>
+                    <h3 class="text-2xl font-bold mb-4">Guided Learning</h3>
+                    <p class="text-slate-400 leading-relaxed font-medium">
+                        Step by step videos and lessons that take you from "What is a wallet?" to "How do I trade?" with ease.
+                    </p>
+                </div>
 
-            <div>
-                <div class="text-emerald-400 text-2xl font-bold mb-4">02.</div>
-                <h3 class="text-2xl font-semibold mb-3">Practice Without Risk</h3>
-                <p class="text-slate-400 leading-relaxed">
-                    A real time simulator where you trade with "play money" to build your skills before risking your capital.
-                </p>
-            </div>
+                <div class="glass p-10 rounded-3xl hover:border-emerald-400/40 transition-colors group">
+                    <div class="w-12 h-12 bg-emerald-500/10 border border-emerald-500/20 rounded-lg flex items-center justify-center mb-6 text-emerald-400 font-bold group-hover:bg-emerald-500 group-hover:text-slate-900 transition-all">02</div>
+                    <h3 class="text-2xl font-bold mb-4">Practice Without Risk</h3>
+                    <p class="text-slate-400 leading-relaxed font-medium">
+                        A real time simulator where you trade with "play money" to build your skills before risking your capital.
+                    </p>
+                </div>
 
-            <div>
-                <div class="text-emerald-400 text-2xl font-bold mb-4">03.</div>
-                <h3 class="text-2xl font-semibold mb-3">24/7 AI Support</h3>
-                <p class="text-slate-400 leading-relaxed">
-                    An AI co-pilot that answers your questions, explains market moves, and guides you as you place simulator trades.
-                </p>
-            </div>
+                <div class="glass p-10 rounded-3xl hover:border-emerald-400/40 transition-colors group">
+                    <div class="w-12 h-12 bg-emerald-500/10 border border-emerald-500/20 rounded-lg flex items-center justify-center mb-6 text-emerald-400 font-bold group-hover:bg-emerald-500 group-hover:text-slate-900 transition-all">03</div>
+                    <h3 class="text-2xl font-bold mb-4">24/7 AI Support</h3>
+                    <p class="text-slate-400 leading-relaxed font-medium">
+                        An AI co-pilot that answers your questions, explains market moves, and guides you as you place simulator trades.
+                    </p>
+                </div>
 
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 border-t border-slate-900">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-center text-xl font-bold mb-12 text-emerald-400 uppercase tracking-widest">General Information</h2>
+            <div class="space-y-8 text-slate-400">
+                <div>
+                    <h4 class="text-white font-bold mb-2">How can I learn crypto safely?</h4>
+                    <p>DigitPilot offers a risk free sandbox environment where beginners can practice trading with virtual funds while following a professional curriculum.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-2">What is an AI trading mentor?</h4>
+                    <p>Our AI Mentor provides real time guidance and explanations for market movements, acting as a personal co-pilot for your entire educational journey.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <footer class="py-12 border-t border-slate-900 text-center">
-        <p class="text-sm text-slate-500 max-w-2xl mx-auto px-6">
-            DigitPilot is an AI powered crypto training ecosystem. We combine structured education with a risk free simulator to help beginners enter the digital asset market with confidence and discipline.
+        <p class="text-xs text-slate-600 uppercase tracking-widest">
+            DigitPilot &copy; 2026 | Developed for the Next Generation of Traders
         </p>
     </footer>
 
