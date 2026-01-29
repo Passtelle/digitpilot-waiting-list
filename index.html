@@ -3,66 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DigitPilot | Trading For Beginners</title>
+    <title>DigitPilot | Exclusive Waitlist</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Space Grotesk', sans-serif; background-color: #020617; color: #ffffff; margin: 0; overflow-x: hidden; }
-        .cyber-bg {
-            background: radial-gradient(circle at 50% -20%, #064e3b 0%, #020617 80%);
-            min-height: 100vh;
-        }
-        .glass-card {
-            background: rgba(15, 23, 42, 0.3);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(16, 185, 129, 0.2);
-            box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
-        }
-        .glow-text { text-shadow: 0 0 20px rgba(16, 185, 129, 0.8); }
-        .neon-border { border: 1px solid #10b981; box-shadow: 0 0 15px rgba(16, 185, 129, 0.4); }
-        .scanline {
-            width: 100%; height: 2px; background: rgba(16, 185, 129, 0.1);
-            position: absolute; animation: scan 8s linear infinite;
-        }
-        @keyframes scan { from { top: 0; } to { top: 100%; } }
+        body { font-family: 'Inter', sans-serif; background-color: #020617; color: #f8fafc; margin: 0; }
+        .main-bg { background: radial-gradient(circle at top, #064e3b 0%, #020617 60%); min-height: 100vh; }
+        .glass-card { background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(16px); border: 1px solid rgba(16, 185, 129, 0.15); border-radius: 24px; }
+        .logic-glow { color: #22d3ee; text-shadow: 0 0 20px rgba(34, 211, 238, 0.5); }
+        .status-badge { background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); color: #10b981; padding: 4px 12px; border-radius: 100px; font-size: 10px; font-weight: 800; letter-spacing: 0.1em; }
     </style>
 </head>
-<body class="cyber-bg relative">
-    <div class="scanline"></div>
+<body class="main-bg">
 
-    <header class="p-8 flex justify-between items-center max-w-7xl mx-auto">
-        <div class="text-emerald-400 font-bold tracking-tighter text-2xl glow-text">DigitPilot</div>
-        <div class="hidden md:flex gap-8 text-xs font-bold tracking-widest text-slate-500 uppercase">
-            <span>Home</span><span>Features</span><span>About</span><span>Help</span>
+    <nav class="max-w-7xl mx-auto p-8 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+            <span class="text-emerald-400 font-black text-2xl tracking-tighter">DigitPilot</span>
         </div>
-    </header>
+        <div class="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-widest text-slate-400">
+            <span class="hover:text-emerald-400 transition-colors cursor-pointer">Home</span>
+            <span class="hover:text-emerald-400 transition-colors cursor-pointer">Features</span>
+            <span class="hover:text-emerald-400 transition-colors cursor-pointer">About</span>
+            <span class="hover:text-emerald-400 transition-colors cursor-pointer">Help</span>
+            <span class="hover:text-emerald-400 transition-colors cursor-pointer text-emerald-400">Blog</span>
+        </div>
+    </nav>
 
-    <main class="flex flex-col items-center justify-center pt-20 pb-32 px-6 text-center">
-        <div class="px-4 py-1 mb-8 text-[10px] font-black tracking-[0.3em] text-emerald-400 uppercase border border-emerald-400/40 rounded-full bg-emerald-400/10">
-            ● System Online
-        </div>
+    <main class="flex flex-col items-center justify-center text-center px-6 pt-12 pb-24">
+        <div class="status-badge mb-10 uppercase">● System Status: Online</div>
         
-        <h1 class="max-w-5xl text-6xl md:text-9xl font-bold mb-8 leading-none tracking-tighter">
-            AI-Powered <br><span class="text-emerald-400 glow-text">Crypto Training</span>
+        <h1 class="max-w-4xl text-5xl md:text-7xl font-extrabold mb-8 tracking-tighter leading-tight">
+            The Next Generation of <br><span class="logic-glow italic">Trading Education</span>
         </h1>
         
-        <p class="text-emerald-400/80 font-bold tracking-[0.4em] uppercase text-sm mb-12">
-            Trading For Beginners
+        <p class="max-w-2xl text-slate-400 text-lg md:text-xl font-medium mb-12">
+            Join the exclusive inner circle for the DigitPilot launch. Master the markets through guided learning and zero-risk simulation.
         </p>
 
-        <div class="w-full max-w-2xl glass-card p-12 rounded-[2rem] relative overflow-hidden">
-            <p class="text-slate-400 mb-8 text-lg">Join the exclusive inner circle. Master the markets through <br>guided learning and zero-risk simulation.</p>
-            
-            <form action="https://formspree.io/f/mdaaolpy" method="POST" class="flex flex-col md:flex-row gap-4">
+        <div class="w-full max-w-xl glass-card p-10 shadow-2xl">
+            <form action="https://formspree.io/f/mdaaolpy" method="POST" class="flex flex-col md:flex-row gap-3">
                 <input type="email" name="email" required placeholder="ENTER YOUR EMAIL" 
-                    class="flex-1 px-8 py-5 rounded-xl bg-black/40 border border-slate-800 focus:outline-none focus:neon-border transition-all text-sm tracking-widest text-white">
+                    class="flex-1 px-6 py-5 rounded-xl bg-black/40 border border-slate-800 focus:outline-none focus:border-emerald-500 transition-all text-sm font-bold tracking-widest">
                 <button type="submit" 
-                    class="px-10 py-5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black uppercase tracking-widest transition-all transform hover:scale-105 shadow-[0_0_30px_rgba(16,185,129,0.5)]">
+                    class="px-8 py-5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black uppercase tracking-widest transition-all shadow-[0_0_30px_rgba(16,185,129,0.3)]">
                     Join the waitlist
                 </button>
             </form>
-
-            <div class="mt-8 flex justify-center gap-8 text-[10px] font-bold text-slate-500 tracking-[0.2em] uppercase">
+            <div class="mt-8 flex justify-center gap-8 text-[10px] font-black text-slate-500 tracking-[0.2em] uppercase">
                 <span class="flex items-center gap-2">● Network Live</span>
                 <span class="flex items-center gap-2">● Limited Seats</span>
             </div>
@@ -70,22 +57,22 @@
     </main>
 
     <section class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 px-6 pb-40">
-        <div class="p-8 border-l border-emerald-500/20 bg-emerald-500/5 hover:bg-emerald-500/10 transition-all">
-            <h3 class="text-emerald-400 font-bold mb-4 tracking-widest uppercase text-xs">01. Guided Learning</h3>
+        <div class="glass-card p-8 border-l-2 border-emerald-500/40">
+            <div class="text-[10px] font-black text-emerald-400 uppercase tracking-widest mb-4">Metric Analysis</div>
+            <h3 class="text-xl font-bold mb-3">Guided Learning</h3>
             <p class="text-slate-400 text-sm leading-relaxed">Step by step lessons from "What is a wallet?" to professional execution logic.</p>
         </div>
-        <div class="p-8 border-l border-emerald-500/20 bg-emerald-500/5 hover:bg-emerald-500/10 transition-all">
-            <h3 class="text-emerald-400 font-bold mb-4 tracking-widest uppercase text-xs">02. Practice Without Risk</h3>
-            <p class="text-slate-400 text-sm leading-relaxed">Real time simulation with virtual funds. Practice safely before touching your savings.</p>
+        <div class="glass-card p-8 border-l-2 border-emerald-500/40">
+            <div class="text-[10px] font-black text-emerald-400 uppercase tracking-widest mb-4">Metric Analysis</div>
+            <h3 class="text-xl font-bold mb-3">Practice Without Risk</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Trade historical data in our Sandbox with zero financial risk to build your confidence.</p>
         </div>
-        <div class="p-8 border-l border-emerald-500/20 bg-emerald-500/5 hover:bg-emerald-500/10 transition-all">
-            <h3 class="text-emerald-400 font-bold mb-4 tracking-widest uppercase text-xs">03. 24/7 AI Mentor</h3>
-            <p class="text-slate-400 text-sm leading-relaxed">An AI co-pilot that explains market moves and guides your hands during every trade.</p>
+        <div class="glass-card p-8 border-l-2 border-emerald-500/40">
+            <div class="text-[10px] font-black text-emerald-400 uppercase tracking-widest mb-4">Metric Analysis</div>
+            <h3 class="text-xl font-bold mb-3">24/7 AI Mentor</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">A personal AI co-pilot explaining every move while you master your strategy.</p>
         </div>
     </section>
 
-    <footer class="p-12 text-center border-t border-slate-900">
-        <div class="text-[10px] text-slate-600 tracking-[0.5em] uppercase">Secure Connection | Latency: 2ms</div>
-    </footer>
 </body>
 </html>
