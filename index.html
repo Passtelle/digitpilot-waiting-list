@@ -2,21 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Your Offer – Get Early Access</title>
+  <title>DigitPilot Waitlist | Crypto Trading Education Without Capital Risk</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="Join the list and get early access, updates, and bonuses reserved for email subscribers."
+    content="Join the DigitPilot launch waitlist. Learn crypto trading through guided education, an AI co pilot and a risk free market simulator that uses real historical data, so you can practice without risking your capital."
   />
   <style>
     :root {
-      --bg: #050816;
-      --card: #0b1020;
+      --bg: #020617;
+      --card: #050816;
       --accent: #00d48a;
       --accent-soft: rgba(0, 212, 138, 0.15);
       --text: #f9fafb;
       --muted: #9ca3af;
-      --border: #1f2933;
+      --border: #111827;
       --error: #f97373;
     }
 
@@ -29,36 +29,79 @@
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         sans-serif;
-      background: radial-gradient(circle at top, #111827 0, #020617 50%, #000 100%);
+      background: radial-gradient(circle at top, #020617 0, #000 55%);
       color: var(--text);
       min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 24px 16px;
     }
 
     .page {
-      max-width: 960px;
-      width: 100%;
+      max-width: 1040px;
       margin: 0 auto;
+      padding: 32px 16px 40px;
     }
 
-    .card {
-      background: linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(3, 7, 18, 0.95));
-      border-radius: 24px;
+    header {
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    .logo-mark {
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 0, #4ade80, var(--accent));
+      box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.9);
+    }
+
+    .badge-small {
+      padding: 4px 10px;
+      border-radius: 999px;
       border: 1px solid var(--border);
-      padding: 24px;
-      box-shadow: 0 40px 120px rgba(0, 0, 0, 0.7);
-      display: grid;
-      grid-template-columns: 1.3fr 1fr;
-      gap: 32px;
+      background: rgba(15, 23, 42, 0.8);
+      font-size: 11px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
 
-    @media (max-width: 768px) {
-      .card {
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .hero {
+      background: radial-gradient(circle at top left, rgba(0, 212, 138, 0.12), #020617);
+      border-radius: 26px;
+      border: 1px solid var(--border);
+      padding: 28px 24px;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 32px;
+      box-shadow: 0 40px 120px rgba(0, 0, 0, 0.7);
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 880px) {
+      .hero {
         grid-template-columns: 1fr;
-        padding: 20px;
+        padding: 24px 18px;
       }
     }
 
@@ -66,12 +109,12 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 4px 10px;
+      padding: 4px 12px;
       border-radius: 999px;
       background: var(--accent-soft);
       color: var(--accent);
-      font-size: 12px;
-      letter-spacing: 0.06em;
+      font-size: 11px;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       margin-bottom: 12px;
     }
@@ -93,65 +136,64 @@
       color: var(--accent);
     }
 
-    .subtitle {
+    .hero-sub {
       color: var(--muted);
       font-size: 15px;
       line-height: 1.5;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
+      max-width: 34rem;
     }
 
-    .benefits {
+    .hero-bullets {
       list-style: none;
-      margin-bottom: 20px;
+      margin-bottom: 12px;
     }
 
-    .benefits li {
+    .hero-bullets li {
       display: flex;
-      align-items: flex-start;
       gap: 8px;
+      align-items: flex-start;
       font-size: 14px;
       color: var(--muted);
       margin-bottom: 6px;
     }
 
-    .benefits li::before {
+    .hero-bullets li::before {
       content: "•";
       color: var(--accent);
-      margin-top: 1px;
       font-size: 18px;
+      margin-top: -1px;
     }
 
-    .social-proof {
+    .micro-trust {
       font-size: 12px;
       color: var(--muted);
-      display: flex;
-      align-items: center;
-      gap: 6px;
       margin-bottom: 16px;
     }
 
-    .avatars {
-      display: flex;
+    .micro-trust span {
+      display: inline-block;
+      margin-right: 10px;
     }
 
-    .avatar {
-      width: 20px;
-      height: 20px;
-      border-radius: 999px;
-      border: 1px solid #020617;
-      background: linear-gradient(135deg, #4b5563, #111827);
-      margin-left: -6px;
+    .cta-card {
+      border-radius: 20px;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(15, 23, 42, 0.9);
+      padding: 14px 14px 12px;
+      max-width: 420px;
     }
 
-    .avatar:first-child {
-      margin-left: 0;
+    .cta-label {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 8px;
     }
 
     form {
-      margin-top: 4px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 8px;
     }
 
     .field-row {
@@ -159,7 +201,7 @@
       gap: 8px;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 520px) {
       .field-row {
         flex-direction: column;
       }
@@ -170,7 +212,7 @@
       padding: 10px 12px;
       border-radius: 999px;
       border: 1px solid var(--border);
-      background: rgba(15, 23, 42, 0.9);
+      background: rgba(15, 23, 42, 0.96);
       color: var(--text);
       font-size: 14px;
       outline: none;
@@ -205,7 +247,7 @@
     button[type="submit"]:hover {
       transform: translateY(-1px);
       filter: brightness(1.05);
-      box-shadow: 0 12px 30px rgba(0, 212, 138, 0.4);
+      box-shadow: 0 10px 28px rgba(0, 212, 138, 0.4);
     }
 
     button[type="submit"]:active {
@@ -213,201 +255,370 @@
       box-shadow: none;
     }
 
-    .helper {
+    .cta-helper {
       font-size: 11px;
       color: var(--muted);
+      margin-top: 2px;
     }
 
-    .helper a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    .helper a:hover {
-      text-decoration: underline;
-    }
-
-    .visual {
+    .hero-visual {
       position: relative;
       border-radius: 20px;
       border: 1px solid var(--border);
-      background: radial-gradient(circle at top left, rgba(0, 212, 138, 0.08), #020617);
+      background: radial-gradient(circle at top left, rgba(0, 212, 138, 0.1), #020617);
       padding: 16px;
       overflow: hidden;
     }
 
-    .badge {
+    .visual-badge {
       position: absolute;
-      top: 16px;
-      right: 16px;
+      top: 14px;
+      right: 14px;
       font-size: 11px;
       padding: 4px 8px;
       border-radius: 999px;
-      background: rgba(15, 23, 42, 0.9);
+      background: rgba(15, 23, 42, 0.95);
       border: 1px solid var(--accent-soft);
       color: var(--accent);
     }
 
-    .chart-window {
+    .visual-title {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .visual-window {
       border-radius: 14px;
       border: 1px solid #111827;
       background: linear-gradient(145deg, #020617, #020617);
       padding: 10px;
-      margin-top: 20px;
+      margin-bottom: 12px;
     }
 
-    .chart-header {
+    .visual-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 8px;
       font-size: 11px;
       color: var(--muted);
+      margin-bottom: 6px;
     }
 
-    .chart-dots {
+    .visual-dots {
       display: flex;
       gap: 4px;
     }
 
-    .chart-dot {
+    .visual-dot {
       width: 6px;
       height: 6px;
       border-radius: 999px;
       background: #374151;
     }
 
-    .chart-body {
-      height: 150px;
+    .visual-chart {
+      height: 140px;
       position: relative;
       overflow: hidden;
     }
 
-    .chart-line {
+    .visual-bars {
       position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(
-          to right,
-          transparent 0%,
-          rgba(107, 114, 128, 0.2) 50%,
-          transparent 100%
-        );
-      opacity: 0.5;
-    }
-
-    .chart-candles {
-      position: absolute;
-      inset: 10px 4px 4px 4px;
+      inset: 16px 8px 8px;
       display: flex;
+      gap: 8px;
       align-items: flex-end;
-      gap: 4px;
     }
 
-    .candle {
-      width: 6px;
+    .bar {
+      width: 10px;
+      border-radius: 999px;
       background: linear-gradient(to top, var(--accent), #4ade80);
-      border-radius: 6px;
-      opacity: 0.8;
+      opacity: 0.9;
     }
 
-    .candle.red {
+    .bar.red {
       background: linear-gradient(to top, #fb7185, #f97373);
     }
 
-    .footer-note {
-      margin-top: 12px;
+    .visual-caption {
       font-size: 11px;
       color: var(--muted);
-      text-align: right;
+    }
+
+    .section {
+      margin-bottom: 32px;
+    }
+
+    .section-header {
+      margin-bottom: 16px;
+    }
+
+    .section-eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+
+    .section-sub {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    @media (max-width: 880px) {
+      .steps {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .step-card {
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      padding: 16px 14px;
+    }
+
+    .step-label {
+      font-size: 12px;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .step-title {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .step-body {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .steps-cta {
+      margin-top: 16px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .steps-cta a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .steps-cta a:hover {
+      text-decoration: underline;
+    }
+
+    .trust {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .trust strong {
+      color: var(--text);
+    }
+
+    .trust-points {
+      margin-top: 10px;
+      font-size: 13px;
+    }
+
+    .trust-points li {
+      margin-bottom: 4px;
+    }
+
+    .trust-points li::marker {
+      color: var(--accent);
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 11px;
+      color: #6b7280;
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+      border-top: 1px solid #020617;
+      padding-top: 10px;
     }
   </style>
 </head>
 <body>
-  <main class="page">
-    <section class="card" aria-labelledby="headline">
+  <div class="page">
+    <header>
+      <div class="logo">
+        <div class="logo-mark"></div>
+        <span>DigitPilot</span>
+      </div>
+      <div class="badge-small">
+        <span class="badge-dot"></span>
+        <span>FB campaign · Waitlist only</span>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title" id="hero">
       <div>
         <div class="eyebrow">
           <span class="eyebrow-dot"></span>
-          Limited early-access list
+          Launch waitlist · Limited spots for 2026
         </div>
-
-        <h1 id="headline">
-          Turn <span>curious clicks</span> into email subscribers.
+        <h1 id="hero-title">
+          The next generation of <span>crypto trading education</span> is almost here.
         </h1>
-
-        <p class="subtitle">
-          Drop your email to get early access, behind-the-scenes updates, and bonuses reserved
-          only for this Facebook campaign.
+        <p class="hero-sub">
+          Join the inner circle for the DigitPilot launch. Learn how to trade with an AI powered market simulator that uses real historical data so you can practice without risking your capital.
         </p>
 
-        <ul class="benefits">
-          <li>Short, actionable updates — no spam, no fluff.</li>
-          <li>Early access to new features, tools, or offers.</li>
-          <li>Occasional bonuses only for email subscribers.</li>
+        <ul class="hero-bullets">
+          <li>Practice in a professional market simulator built on real historical data.</li>
+          <li>Build solid execution logic with guided lessons, checklists and exercises.</li>
+          <li>Learn how to think about capital risk before you ever touch your savings.</li>
         </ul>
 
-        <div class="social-proof">
-          <div class="avatars">
-            <div class="avatar"></div>
-            <div class="avatar"></div>
-            <div class="avatar"></div>
-          </div>
-          <span>People are already joining from this ad.</span>
-        </div>
+        <p class="micro-trust">
+          <span>✅ Beginner friendly</span>
+          <span>✅ No live trading required</span>
+          <span>✅ Free to join</span>
+        </p>
 
-        <form
-          action="https://formspree.io/f/mdaaolpy"
-          method="POST"
-        >
-          <div class="field-row">
-            <input
-              type="email"
-              name="email"
-              required
-              placeholder="Enter your best email"
-              aria-label="Email address"
-            />
-            <button type="submit">
-              Get early access →
-            </button>
-          </div>
-          <p class="helper">
-            We respect your inbox. Unsubscribe anytime.  
-          </p>
-        </form>
+        <div class="cta-card">
+          <p class="cta-label">Enter the launch waitlist from this Facebook ad:</p>
+          <form action="https://formspree.io/f/mdaaolpy" method="POST">
+            <div class="field-row">
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your best email"
+                aria-label="Email address"
+                required
+              />
+              <button type="submit">
+                Join the waitlist →
+              </button>
+            </div>
+            <p class="cta-helper">
+              No spam and no hype. You can unsubscribe in one click.
+            </p>
+          </form>
+        </div>
       </div>
 
-      <aside class="visual" aria-hidden="true">
-        <div class="badge">From this ad only</div>
-
-        <div class="chart-window">
-          <div class="chart-header">
-            <span>Live preview</span>
-            <div class="chart-dots">
-              <div class="chart-dot"></div>
-              <div class="chart-dot"></div>
-              <div class="chart-dot"></div>
+      <aside class="hero-visual" aria-hidden="true">
+        <div class="visual-badge">Preview of your training cockpit</div>
+        <p class="visual-title">Practice execution in a safe environment</p>
+        <div class="visual-window">
+          <div class="visual-header">
+            <span>DigitPilot · Market Simulator</span>
+            <div class="visual-dots">
+              <div class="visual-dot"></div>
+              <div class="visual-dot"></div>
+              <div class="visual-dot"></div>
             </div>
           </div>
-          <div class="chart-body">
-            <div class="chart-line"></div>
-            <div class="chart-candles">
-              <div class="candle" style="height: 30%"></div>
-              <div class="candle red" style="height: 55%"></div>
-              <div class="candle" style="height: 70%"></div>
-              <div class="candle" style="height: 40%"></div>
-              <div class="candle red" style="height: 65%"></div>
-              <div class="candle" style="height: 85%"></div>
+          <div class="visual-chart">
+            <div class="visual-bars">
+              <div class="bar" style="height: 35%"></div>
+              <div class="bar red" style="height: 55%"></div>
+              <div class="bar" style="height: 80%"></div>
+              <div class="bar" style="height: 45%"></div>
+              <div class="bar red" style="height: 65%"></div>
+              <div class="bar" style="height: 90%"></div>
             </div>
           </div>
         </div>
-
-        <p class="footer-note">
-          Plug in your copy, brand colors, and logo to match your offer.
+        <p class="visual-caption">
+          Learn how markets move, test your ideas on historical data and build discipline before you ever risk real capital.
         </p>
       </aside>
     </section>
-  </main>
+
+    <!-- JOURNEY -->
+    <section class="section" aria-labelledby="journey-title">
+      <div class="section-header">
+        <div class="section-eyebrow">Your journey</div>
+        <h2 class="section-title" id="journey-title">From curious to confident trader</h2>
+        <p class="section-sub">
+          DigitPilot combines structured lessons, a risk free market simulator and an AI co pilot so you can learn at your own pace without putting your savings in danger.
+        </p>
+      </div>
+
+      <div class="steps">
+        <article class="step-card">
+          <div class="step-label">Step 1</div>
+          <h3 class="step-title">Guided learning</h3>
+          <p class="step-body">
+            Start with the basics. What is a wallet, how do exchanges work and how do you place your first order. Follow a clear path with videos, short texts and simple checklists created for beginners.
+          </p>
+        </article>
+
+        <article class="step-card">
+          <div class="step-label">Step 2</div>
+          <h3 class="step-title">Practice without risk</h3>
+          <p class="step-body">
+            Enter the DigitPilot Sandbox, a market simulator that replays historical data. Test your ideas, build execution logic and make mistakes with play money instead of real cash.
+          </p>
+        </article>
+
+        <article class="step-card">
+          <div class="step-label">Step 3</div>
+          <h3 class="step-title">AI co pilot on call</h3>
+          <p class="step-body">
+            Ask questions at any time. Your AI co pilot explains sudden market moves, helps you read the chart and walks you through what happened in your simulated trades so you understand what worked and what did not.
+          </p>
+        </article>
+      </div>
+
+      <p class="steps-cta">
+        Ready to be part of the first wave?
+        <a href="#hero">Join the launch waitlist from this page.</a>
+      </p>
+    </section>
+
+    <!-- TRUST / GEO FOOTER -->
+    <section class="section" aria-labelledby="trust-title">
+      <div class="section-header">
+        <h2 class="section-title" id="trust-title">What is DigitPilot, exactly?</h2>
+      </div>
+      <div class="trust">
+        <p>
+          <strong>DigitPilot is an AI powered crypto training ecosystem.</strong>
+          We combine structured education with a risk free market simulator to help beginners enter the digital asset market with confidence, discipline and a clear approach to capital risk.
+        </p>
+        <ul class="trust-points">
+          <li>No get rich quick promises. We focus on skills and discipline.</li>
+          <li>No meme coin shilling. Education comes first.</li>
+          <li>Designed for beginners and everyday people who want clarity and not trader jargon.</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <span>© <span id="year"></span> DigitPilot. All rights reserved.</span>
+      <span>You can unsubscribe in one click. Your email stays with DigitPilot and we do not sell your data.</span>
+    </footer>
+  </div>
+
+  <script>
+    // Set current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
