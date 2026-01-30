@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DigitPilot - Master Crypto Trading Risk-Free</title>
+    <title>DigitPilot - AI-Powered Crypto Training</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -16,315 +16,487 @@
 
         :root {
             --emerald: #10b981;
+            --emerald-dark: #059669;
             --cyan: #06b6d4;
             --purple: #a26cff;
             --gold: #f59e0b;
-            --dark: #0f172a;
-            --light-gray: #f8fafc;
-            --text-gray: #64748b;
+            --bg-dark: #05090c;
+            --bg-darker: #020406;
+            --text-light: #f8fafc;
+            --text-gray: #94a3b8;
         }
 
         body {
-            font-family: 'Syne', sans-serif;
-            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-            color: var(--dark);
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-light);
             line-height: 1.6;
             overflow-x: hidden;
         }
 
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 0 20px;
+        /* Background effects */
+        .bg-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(16, 185, 129, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(16, 185, 129, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: 0;
+            opacity: 0.3;
         }
 
-        /* Animated background elements */
-        .bg-shape {
+        .bg-gradient {
             position: fixed;
+            width: 600px;
+            height: 600px;
             border-radius: 50%;
-            opacity: 0.03;
-            z-index: 0;
+            filter: blur(100px);
+            opacity: 0.15;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .gradient-1 {
+            background: radial-gradient(circle, var(--emerald) 0%, transparent 70%);
+            top: -200px;
+            right: -100px;
             animation: float 20s infinite ease-in-out;
         }
 
-        .shape-1 {
-            width: 400px;
-            height: 400px;
-            background: var(--emerald);
-            top: -200px;
-            right: -100px;
-            animation-delay: 0s;
-        }
-
-        .shape-2 {
-            width: 300px;
-            height: 300px;
-            background: var(--cyan);
-            bottom: -150px;
-            left: -50px;
-            animation-delay: 5s;
+        .gradient-2 {
+            background: radial-gradient(circle, var(--cyan) 0%, transparent 70%);
+            bottom: -300px;
+            left: -200px;
+            animation: float 25s infinite ease-in-out reverse;
         }
 
         @keyframes float {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            33% { transform: translate(30px, -30px) rotate(120deg); }
-            66% { transform: translate(-20px, 20px) rotate(240deg); }
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(50px, -50px) scale(1.1); }
+            66% { transform: translate(-30px, 30px) scale(0.9); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 10;
         }
 
         /* Header */
         header {
-            position: relative;
-            padding: 40px 0 20px;
-            text-align: center;
-            z-index: 10;
+            padding: 32px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(5, 9, 12, 0.8);
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            animation: fadeInDown 0.6s ease-out;
         }
 
         .logo {
-            max-width: 180px;
-            height: auto;
-            filter: drop-shadow(0 4px 12px rgba(16, 185, 129, 0.15));
-            animation: fadeInDown 0.8s ease-out;
+            height: 40px;
+            width: auto;
+            filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.4));
         }
 
         @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         /* Hero Section */
         .hero {
-            position: relative;
+            padding: 100px 0 80px;
             text-align: center;
-            padding: 60px 0 40px;
-            z-index: 10;
+            position: relative;
         }
 
-        .status-badge {
+        .launch-badge {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            background: rgba(16, 185, 129, 0.08);
-            border: 1.5px solid rgba(16, 185, 129, 0.3);
-            border-radius: 30px;
-            padding: 8px 20px;
-            font-size: 11px;
+            gap: 10px;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 50px;
+            padding: 10px 24px;
+            font-size: 12px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
+            letter-spacing: 2px;
             color: var(--emerald);
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             animation: fadeIn 0.8s ease-out 0.2s both;
+            box-shadow: 0 0 30px rgba(16, 185, 129, 0.2);
         }
 
-        .status-dot {
-            width: 6px;
-            height: 6px;
+        .status-indicator {
+            width: 8px;
+            height: 8px;
             background: var(--emerald);
             border-radius: 50%;
+            box-shadow: 0 0 10px var(--emerald);
             animation: pulse 2s infinite;
         }
 
         @keyframes pulse {
             0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.5; transform: scale(0.8); }
+            50% { opacity: 0.6; transform: scale(0.85); }
         }
 
         h1 {
-            font-size: 44px;
-            font-weight: 800;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 72px;
+            font-weight: 700;
             line-height: 1.1;
-            margin-bottom: 20px;
-            background: linear-gradient(135deg, var(--dark) 0%, #334155 100%);
+            margin-bottom: 32px;
+            background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             animation: fadeIn 0.8s ease-out 0.4s both;
+            letter-spacing: -2px;
+        }
+
+        .hero-highlight {
+            background: linear-gradient(135deg, var(--emerald) 0%, var(--cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
+            from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .subtitle {
-            font-size: 18px;
+        .hero-subtitle {
+            font-size: 20px;
             color: var(--text-gray);
-            margin-bottom: 40px;
-            font-weight: 400;
-            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto 60px;
+            line-height: 1.7;
             animation: fadeIn 0.8s ease-out 0.6s both;
         }
 
-        /* Icon Feature */
-        .feature-icon-wrapper {
+        /* Feature Icon Hero */
+        .feature-showcase {
             display: flex;
             justify-content: center;
-            margin: 40px 0 50px;
+            margin: 60px 0;
             animation: fadeIn 0.8s ease-out 0.8s both;
         }
 
-        .feature-icon {
+        .feature-card-hero {
             position: relative;
-            width: 80px;
-            height: 80px;
+            width: 140px;
+            height: 140px;
             background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
-            border: 2px solid rgba(16, 185, 129, 0.3);
-            border-radius: 20px;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 24px;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            cursor: pointer;
         }
 
-        .feature-icon:hover {
-            transform: scale(1.05) rotate(5deg);
-            border-color: var(--emerald);
-            box-shadow: 0 10px 40px rgba(16, 185, 129, 0.3);
+        .feature-card-hero::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: linear-gradient(135deg, var(--emerald), var(--cyan));
+            border-radius: 24px;
+            opacity: 0;
+            transition: opacity 0.5s;
+            z-index: -1;
         }
 
-        .feature-icon svg {
-            width: 40px;
-            height: 40px;
+        .feature-card-hero:hover::before {
+            opacity: 1;
+        }
+
+        .feature-card-hero:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 20px 60px rgba(16, 185, 129, 0.4);
+        }
+
+        .feature-card-hero svg {
+            width: 70px;
+            height: 70px;
             stroke: var(--emerald);
             stroke-width: 2;
             fill: none;
+            filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.6));
         }
 
-        /* Benefits */
-        .benefits {
-            margin: 50px 0;
-            animation: fadeIn 0.8s ease-out 1s both;
+        /* Corner accent */
+        .corner-accent {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            opacity: 0;
+            transition: opacity 0.5s;
         }
 
-        .benefit-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 16px;
-            margin-bottom: 24px;
-            padding: 20px;
-            background: white;
-            border-radius: 16px;
-            border: 1px solid rgba(16, 185, 129, 0.1);
-            transition: all 0.3s ease;
+        .feature-card-hero:hover .corner-accent {
+            opacity: 1;
         }
 
-        .benefit-item:hover {
+        .corner-accent.top-left {
+            top: 8px;
+            left: 8px;
+            border-top: 2px solid var(--emerald);
+            border-left: 2px solid var(--emerald);
+            border-radius: 4px 0 0 0;
+        }
+
+        .corner-accent.top-right {
+            top: 8px;
+            right: 8px;
+            border-top: 2px solid var(--emerald);
+            border-right: 2px solid var(--emerald);
+            border-radius: 0 4px 0 0;
+        }
+
+        .corner-accent.bottom-left {
+            bottom: 8px;
+            left: 8px;
+            border-bottom: 2px solid var(--emerald);
+            border-left: 2px solid var(--emerald);
+            border-radius: 0 0 0 4px;
+        }
+
+        .corner-accent.bottom-right {
+            bottom: 8px;
+            right: 8px;
+            border-bottom: 2px solid var(--emerald);
+            border-right: 2px solid var(--emerald);
+            border-radius: 0 0 4px 0;
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            color: var(--emerald);
+            margin-bottom: 16px;
+            padding: 6px 16px;
+            background: rgba(16, 185, 129, 0.1);
+            border-radius: 20px;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .benefit-card {
+            position: relative;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 32px;
+            transition: all 0.4s ease;
+            overflow: hidden;
+        }
+
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--emerald), var(--cyan));
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .benefit-card:hover {
             transform: translateX(8px);
             border-color: rgba(16, 185, 129, 0.3);
-            box-shadow: 0 8px 24px rgba(16, 185, 129, 0.08);
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        .benefit-card:hover::before {
+            opacity: 1;
+        }
+
+        .benefit-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 16px;
         }
 
         .benefit-number {
-            min-width: 32px;
-            height: 32px;
-            background: linear-gradient(135deg, var(--emerald) 0%, #059669 100%);
-            color: white;
-            border-radius: 8px;
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--emerald), var(--emerald-dark));
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 20px;
             font-weight: 700;
-            font-size: 14px;
-            font-family: 'Space Mono', monospace;
+            color: white;
+            box-shadow: 0 4px 20px rgba(16, 185, 129, 0.4);
         }
 
-        .benefit-content h3 {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 6px;
-            color: var(--dark);
+        .benefit-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: white;
         }
 
-        .benefit-content p {
-            font-size: 14px;
+        .benefit-description {
+            font-size: 16px;
             color: var(--text-gray);
-            line-height: 1.5;
+            line-height: 1.7;
+            padding-left: 68px;
         }
 
-        /* Form Section */
-        .form-section {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 24px;
-            border: 2px solid rgba(16, 185, 129, 0.15);
-            box-shadow: 0 20px 60px rgba(16, 185, 129, 0.08);
-            margin: 50px 0;
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .cta-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(6, 182, 212, 0.05) 100%);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 32px;
+            padding: 60px 40px;
             position: relative;
-            z-index: 10;
-            animation: fadeIn 0.8s ease-out 1.2s both, slideUp 0.8s ease-out 1.2s both;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(16, 185, 129, 0.2);
         }
 
-        @keyframes slideUp {
-            from { transform: translateY(30px); }
-            to { transform: translateY(0); }
+        .cta-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
         }
 
-        .form-section h2 {
-            font-size: 28px;
-            font-weight: 800;
-            margin-bottom: 12px;
-            text-align: center;
-            color: var(--dark);
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
 
-        .form-section .form-subtitle {
-            text-align: center;
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        .cta-subtitle {
+            font-size: 16px;
             color: var(--text-gray);
-            font-size: 14px;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
 
         .email-form {
             display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .input-wrapper {
-            position: relative;
+            gap: 12px;
+            max-width: 500px;
+            margin: 0 auto;
         }
 
         .email-input {
-            width: 100%;
-            padding: 18px 20px;
+            flex: 1;
+            padding: 18px 24px;
             font-size: 16px;
-            border: 2px solid #e2e8f0;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 12px;
-            font-family: 'Syne', sans-serif;
+            color: white;
+            font-family: 'Inter', sans-serif;
             transition: all 0.3s ease;
-            background: var(--light-gray);
+        }
+
+        .email-input::placeholder {
+            color: var(--text-gray);
         }
 
         .email-input:focus {
             outline: none;
             border-color: var(--emerald);
-            background: white;
+            background: rgba(255, 255, 255, 0.08);
             box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
         }
 
         .submit-btn {
-            padding: 18px 32px;
+            padding: 18px 36px;
             font-size: 16px;
             font-weight: 700;
-            background: linear-gradient(135deg, var(--emerald) 0%, #059669 100%);
+            background: linear-gradient(135deg, var(--emerald) 0%, var(--emerald-dark) 100%);
             color: white;
             border: none;
             border-radius: 12px;
             cursor: pointer;
-            font-family: 'Syne', sans-serif;
-            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-            box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3);
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            box-shadow: 0 4px 20px rgba(16, 185, 129, 0.4);
         }
 
         .submit-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4);
+            box-shadow: 0 8px 30px rgba(16, 185, 129, 0.5);
         }
 
         .submit-btn:active {
@@ -333,80 +505,127 @@
 
         /* Footer */
         footer {
+            padding: 60px 0 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
             text-align: center;
-            padding: 40px 20px 60px;
-            position: relative;
-            z-index: 10;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .footer-text {
-            font-size: 13px;
+            font-size: 14px;
             color: var(--text-gray);
             line-height: 1.8;
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 24px;
-            background: white;
-            border-radius: 16px;
-            border: 1px solid rgba(16, 185, 129, 0.1);
+            margin-bottom: 24px;
         }
 
         .footer-text strong {
-            color: var(--dark);
-            font-weight: 700;
+            color: white;
+            font-weight: 600;
         }
 
-        /* Mobile Responsive */
-        @media (max-width: 640px) {
+        .footer-logo {
+            opacity: 0.4;
+            height: 32px;
+            margin-top: 24px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 48px;
+            }
+
+            .section-title {
+                font-size: 36px;
+            }
+
+            .cta-title {
+                font-size: 32px;
+            }
+
+            .email-form {
+                flex-direction: column;
+            }
+
+            .benefit-description {
+                padding-left: 0;
+                margin-top: 12px;
+            }
+
+            .cta-container {
+                padding: 40px 24px;
+            }
+
+            .hero {
+                padding: 60px 0 40px;
+            }
+
+            .benefits-section {
+                padding: 60px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
             h1 {
                 font-size: 36px;
             }
 
-            .subtitle {
+            .hero-subtitle {
                 font-size: 16px;
             }
 
-            .form-section {
-                padding: 30px 20px;
+            .benefit-card {
+                padding: 24px;
             }
 
-            .benefit-item {
-                padding: 16px;
+            .benefit-title {
+                font-size: 20px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Background shapes -->
-    <div class="bg-shape shape-1"></div>
-    <div class="bg-shape shape-2"></div>
+    <!-- Background Effects -->
+    <div class="bg-grid"></div>
+    <div class="bg-gradient gradient-1"></div>
+    <div class="bg-gradient gradient-2"></div>
 
     <!-- Header -->
     <header>
         <div class="container">
-            <!-- Logo will be placed here -->
-            <img src="logo.png" alt="DigitPilot" class="logo">
+            <div class="logo-container">
+                <img src="logo.png" alt="DigitPilot" class="logo">
+            </div>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="container">
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="status-badge">
-                <span class="status-dot"></span>
-                Launch 2025
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="launch-badge">
+                <span class="status-indicator"></span>
+                Launching 2026
             </div>
-            
-            <h1>Master Crypto Trading<br>Without Risking a Dollar</h1>
-            
-            <p class="subtitle">
+
+            <h1>
+                Master Crypto Trading<br>
+                <span class="hero-highlight">Without Risking a Dollar</span>
+            </h1>
+
+            <p class="hero-subtitle">
                 Learn, practice, and perfect your strategy in our AI-powered sandbox before you ever touch real money.
             </p>
 
-            <!-- Feature Icon (Target from your features) -->
-            <div class="feature-icon-wrapper">
-                <div class="feature-icon">
+            <div class="feature-showcase">
+                <div class="feature-card-hero">
+                    <div class="corner-accent top-left"></div>
+                    <div class="corner-accent top-right"></div>
+                    <div class="corner-accent bottom-left"></div>
+                    <div class="corner-accent bottom-right"></div>
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="12" cy="12" r="10"></circle>
                         <circle cx="12" cy="12" r="6"></circle>
@@ -414,62 +633,84 @@
                     </svg>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Benefits -->
-        <section class="benefits">
-            <div class="benefit-item">
-                <div class="benefit-number">1</div>
-                <div class="benefit-content">
-                    <h3>Learn the Fundamentals</h3>
-                    <p>Step-by-step videos take you from complete beginner to confident trader.</p>
-                </div>
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">The System</span>
+                <h2 class="section-title">Built for Beginners</h2>
             </div>
 
-            <div class="benefit-item">
-                <div class="benefit-number">2</div>
-                <div class="benefit-content">
-                    <h3>Practice Risk-Free</h3>
-                    <p>Trade with virtual money in real market conditions. Build skills without the stress.</p>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-header">
+                        <div class="benefit-number">1</div>
+                        <h3 class="benefit-title">Learn the Fundamentals</h3>
+                    </div>
+                    <p class="benefit-description">
+                        Step-by-step videos take you from "What is a wallet?" to executing your first trade with confidence.
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-header">
+                        <div class="benefit-number">2</div>
+                        <h3 class="benefit-title">Practice Risk-Free</h3>
+                    </div>
+                    <p class="benefit-description">
+                        Trade with virtual money in real market conditions. Build muscle memory without the stress or financial risk.
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-header">
+                        <div class="benefit-number">3</div>
+                        <h3 class="benefit-title">24/7 AI Mentorship</h3>
+                    </div>
+                    <p class="benefit-description">
+                        Your AI co-pilot grades setups, answers questions in real-time, and keeps you disciplined when emotions run high.
+                    </p>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="benefit-item">
-                <div class="benefit-number">3</div>
-                <div class="benefit-content">
-                    <h3>Get AI Guidance 24/7</h3>
-                    <p>Your AI mentor grades setups, answers questions, and keeps you disciplined.</p>
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Join the Waitlist</h2>
+                    <p class="cta-subtitle">Get exclusive early access when we launch</p>
+
+                    <form action="https://formspree.io/f/mdaaolpy" method="POST" class="email-form">
+                        <input 
+                            type="email" 
+                            name="email" 
+                            placeholder="Enter your email" 
+                            required 
+                            class="email-input"
+                        >
+                        <button type="submit" class="submit-btn">
+                            Reserve Spot →
+                        </button>
+                    </form>
                 </div>
             </div>
-        </section>
-
-        <!-- Email Form -->
-        <section class="form-section">
-            <h2>Join the Waitlist</h2>
-            <p class="form-subtitle">Get exclusive early access when we launch</p>
-            
-            <form action="https://formspree.io/f/mdaaolpy" method="POST" class="email-form">
-                <div class="input-wrapper">
-                    <input 
-                        type="email" 
-                        name="email" 
-                        placeholder="Enter your email" 
-                        required 
-                        class="email-input"
-                    >
-                </div>
-                <button type="submit" class="submit-btn">
-                    Reserve My Spot →
-                </button>
-            </form>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-text">
-                <strong>DigitPilot</strong> is an AI-powered crypto training platform. We help beginners learn to trade through guided education, risk-free simulation, and 24/7 AI mentorship.
+            <div class="footer-content">
+                <p class="footer-text">
+                    <strong>DigitPilot</strong> is an AI-powered crypto training ecosystem. We combine structured education with a risk-free simulator to help beginners enter the digital asset market with confidence and discipline.
+                </p>
+                <img src="logo.png" alt="DigitPilot" class="footer-logo">
             </div>
         </div>
     </footer>
